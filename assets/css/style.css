@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root{
+  --white: #FFFFFF;
+  --screen-color-dark: #181F33;
+  --button-gray-dark: #647198;
+  --button-color-dark: #EAE3DC;
+  --text-color: #434A59;
+  --button-red-dark: #D03F2F;
+  --bg-dark: #3b4663;
+  --input-bg-dark: #242D44;
+  --button-red-hover-dark: #F96B5B;
+  --button-hover-dark: #FFFFFE;
+  --button-gray-hover-dark: #A2B2E1;
+  --bg-light: #e6e6e6;
+  --text-color-light: #36362C;
+  --input-bg-light: #D2CDCD;
+  --button-red-light: #C85402;
+  --screen-color-light: #EEEEEE;
+  --button-green-light: #378187;
+  --button-red-hover-light: #FF8A38;
+  --button-green-hover-light: #62B5BC;
+  --button-color-light: #E5E4E1;
+  --bg-purple: #17062a;
+  --text-color-purple: #FFE53D;
+  --input-bg-purple: #1E0936;
+  --button-blue-purple: #00DED0;
+  --button-color-dark-purple: #331C4D;
+  --button-color-purple: #56077C;
+  --black-purple: #1A2327;
+  --button-color-hover-purple: #8631AF;
+  --button-color-dark-hover-purple: #6C34AC;
+  --button-blue-hover-purple: #93FFF8;
+}
+
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  font-family: "League Spartan", serif;
+  background-color: var(--bg-dark);
+  transition: all .5s ease-in
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+  box-sizing: border-box;
+  font-family: "League Spartan", serif;
+}
+
+body.light-theme{
+  background-color: var(--bg-light);
+}
+
+body.purple-theme{
+  background-color: var(--bg-purple);
+}
+
+.container{
+  padding: 30px 24px;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 7px;
+  margin-bottom: 32px;
+}
+
+.logo{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 29.44px;
+  letter-spacing: -0.5333333611488342px;
+  text-align: center;
+  color: var(--white);
+}
+
+body.light-theme .logo{
+  color: var(--text-color-light);
+}
+
+body.purple-theme .logo{
+  color: var(--text-color-purple);
+}
+
+.theme{
+  display: flex;
+  gap: 26px;
+  align-items: end;
+}
+
+.theme p{
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 11.04px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+body.light-theme .theme p{
+  color: var(--text-color-light);
+}
+
+body.purple-theme .theme p{
+  color: var(--text-color-purple);
+}
+
+.theme label{
+  width: 71px;
+}
+
+.themes{
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 7px;
+}
+
+.theme label input{
+  -webkit-appearance: none;
+  appearance: none;
+  height: 26px;
+  background-color: var(--input-bg-dark);
+  border-radius: 13px;
+  outline: none;
+  width: 71px;
+  margin: 0;
+  padding: 4px;
+}
+
+body.light-theme .theme label input{
+  background-color: var(--input-bg-light);
+}
+
+body.purple-theme .theme label input{
+  background-color: var(--input-bg-purple);
+}
+
+.theme label input::-webkit-slider-thumb{
+  -webkit-appearance: none; 
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--button-red-dark);
+  cursor: pointer;
+}
+
+body.light-theme .theme label input::-webkit-slider-thumb{
+  background-color: var(--button-red-light);
+}
+
+body.purple-theme .theme label input::-webkit-slider-thumb{
+  background-color: var(--button-blue-purple);
+}
+
+.screen{
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--screen-color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 29px 24px 22px;
+  margin-bottom: 24px;
+}
+
+body.light-theme .screen{
+  background-color: var(--screen-color-light);
+}
+
+body.purple-theme .screen{
+  background-color: var(--input-bg-purple);
+}
+
+.screen p{
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 36.8px;
+  letter-spacing: -0.6666666865348816px;
+  text-align: right;
+  color: var(--white);
+}
+
+body.light-theme .screen p{
+  color: var(--text-color-light);
+}
+
+body.purple-theme .screen p{
+  color: var(--text-color-purple);
+}
+
+.buttons{
+  background-color: var(--input-bg-dark);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 13px;
+  border-radius: 10px;
+}
+
+body.light-theme .buttons{
+  background-color: var(--input-bg-light);
+}
+
+body.purple-theme .buttons{
+  background-color: var(--input-bg-purple);
+}
+
+.button{
+  background-color: var(--button-color-dark);
+  color: var(--text-color);
+  padding: 13px 10px 11px;
+  box-shadow: 0px -4px 0px 0px #B3A497 inset;
+  border-radius: 5px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 29.44px;
+  letter-spacing: -0.5333333611488342px;
+  text-align: center;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.light-theme .button{
+  background-color: var(--button-color-light);
+  color: var(--text-color-light);
+  box-shadow: 0px -4px 0px 0px #A79E91 inset;
+}
+
+body.purple-theme .button{
+  background-color: var(--button-color-dark-purple);
+  color: var(--text-color-purple);
+  box-shadow: 0px -4px 0px 0px #881C9E inset;
+}
+
+#resetBtn, #totalBtn{
+  grid-column: span 2;
+}
+
+#deleteBtn, #resetBtn{
+  background-color: var(--button-gray-dark);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 18.4px;
+  letter-spacing: -0.3333333432674408px;
+  text-align: center;
+  box-shadow: 0px -4px 0px 0px #414E73 inset;
+}
+
+body.light-theme #deleteBtn, body.light-theme #resetBtn{
+  background-color: var(--button-green-light);
+  box-shadow: 0px -4px 0px 0px #1B6066 inset;
+}
+
+body.purple-theme #deleteBtn, body.purple-theme #resetBtn{
+  background-color: var(--button-color-purple);
+  box-shadow: 0px -4px 0px 0px #BE15F4 inset;
+}
+
+#totalBtn{
+  background-color: var(--button-red-dark);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 18.4px;
+  letter-spacing: -0.3333333432674408px;
+  text-align: center;
+  box-shadow: 0px -4px 0px 0px #93261A inset;
+}
+
+body.light-theme #totalBtn{
+  background-color: var(--button-red-light);
+  box-shadow: 0px -4px 0px 0px #873901 inset;
+}
+
+body.purple-theme #totalBtn{
+  background-color: var(--button-blue-purple);
+  box-shadow: 0px -4px 0px 0px #6CF9F1 inset;
+}
+
+@media only screen and (min-width: 768px){
+  .container-fluid{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container{
+    padding: 0;
+    width: 540px;
+  }
+  .theme label input::-webkit-slider-thumb:hover{
+    background-color: var(--button-red-hover-dark);
+  }
+  body.light-theme .theme label input::-webkit-slider-thumb:hover{
+    background-color: var(--button-red-hover-light);
+  }
+  body.purple-theme .theme label input::-webkit-slider-thumb:hover{
+    background-color: var(--button-blue-hover-purple);
+  }
+  .screen{
+    padding: 40px 32px 36px;
+  }
+  .screen p{
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 51.52px;
+    letter-spacing: -0.9333333373069763px;
+  }
+  .buttons{
+    padding: 32px 32px 32px 30px;
+    gap: 24px;
+  }
+  .button{
+    border-radius: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 36.8px;
+    letter-spacing: -0.6666666865348816px;
+    height: 64px;
+    cursor: pointer;
+  }
+  .button:hover{
+    background-color: var(--button-hover-dark);
+  }
+  body.light-theme .button:hover{
+    background-color: var(--white);
+  }
+  body.purple-theme .button:hover{
+    background-color: var(--button-color-dark-hover-purple);
+  }
+  #resetBtn, #totalBtn{
+    grid-column: span 2;
+  }
+  #deleteBtn, #resetBtn{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 25.76px;
+    letter-spacing: -0.46666666865348816px;
+  }
+  body.light-theme #deleteBtn:hover, body.light-theme #resetBtn:hover{
+    background-color: var(--button-green-hover-light);
+  }
+  body.purple-theme #deleteBtn:hover, body.purple-theme #resetBtn:hover{
+    background-color: var(--button-color-hover-purple);
+  }
+  #deleteBtn:hover, #resetBtn:hover{
+    background-color: var(--button-gray-hover-dark);
+  }
+  #totalBtn{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 25.76px;
+    letter-spacing: -0.46666666865348816px;
+  }
+  #totalBtn:hover{
+    background-color: var(--button-red-hover-dark);
+  }
+  body.light-theme #totalBtn:hover{
+    background-color: var(--button-red-hover-light);
+  }
+  body.purple-theme #totalBtn:hover{
+    background-color: var(--button-blue-hover-purple);
+  }
+}
